@@ -1,220 +1,107 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta tags and other head elements -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hariharan Ramamoorthy's Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horizontal Work Experience Timeline</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+  }
+  .timeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+  }
+  .timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #007bff;
+    z-index: 1;
+  }
+  .timeline-item {
+    position: relative;
+    text-align: center;
+    width: 18%;
+    z-index: 2;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    z-index: 3;
+  }
+  .timeline-content {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .timeline-item h3 {
+    margin: 0;
+    color: #007bff;
+    font-size: 1.1em;
+  }
+  .timeline-item p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #333;
+  }
+</style>
 </head>
 <body>
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
 
-</body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-    </section>
-
- <section id="about" class="container mt-5">
-    <h2 class="mb-4">About Me</h2>
-    <p>Accomplished Senior Manager with over 20 years of extensive experience in global talent systems and services across India, Europe, and the US. Adept at leading testing initiatives for HR information systems changes, driving stakeholder engagement, and mentoring teams for growth. Holds a Master's degree in Data Science, combining technical expertise with strategic leadership to drive organizational success and innovation.</p>
-
-    <div class="accordion" id="cvAccordion">
-        <div class="card">
-            <div class="card-header" id="headingSkills">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseSkills" aria-expanded="true" aria-controls="collapseSkills">
-                        Skills
-                    </button>
-                </h2>
-            </div>
-
-            <div id="collapseSkills" class="collapse show" aria-labelledby="headingSkills" data-parent="#cvAccordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Data Science and Analytics - Python, Power BI, SQL</li>
-                        <li>Human Resources Information Systems</li>
-                        <li>Applicant Tracking Systems (Smart Recruiters, ICIMS), Onboarding and Core HR (SAP SuccessFactors, Taleo, Oracle), Payroll (ADP), Employee Lifecycle Management</li>
-                        <li>Process Improvements Methodologies - Lean, Six Sigma, MS Visio</li>
-                        <li>Test Management – SharePoint, JIRA</li>
-                        <li>Test Automation - Tricentis Tosca</li>
-                        <li>Software Development Lifecycle - Waterfall, Agile</li>
-                        <li>Project Management and PMO - MS Project Plan, JIRA</li>
-                        <li>Stakeholder Management</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Work Experience
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#cvAccordion">
-                    <div class="card-body">
-                        <div class="work-wrapper">
-                            <!-- Work experience tiles with horizontal scroll -->
-                            <div class="work-tile">
-                                <div class="card">
-                                    <img src="images/companies/Resources.png" class="card-img-top" alt="Publicis Lion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Senior Manager</h5>
-                                        <p class="card-text">Publicis Lion Re:Sources, Atlanta, GA</p>
-                                        <p class="card-text">8/2019 - CURRENT</p>
-                                    </div>
-                                </div>
-                            </div>
-                           <div class="work-tile">
-                                <div class="card">
-                                    <img src="images/companies/ps.jpg" class="card-img-top" alt="Publicis Lion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Manager</h5>
-                                        <p class="card-text">Publicis Sapient, London, England</p>
-                                        <p class="card-text">8/2019 - CURRENT</p>
-                                    </div>
-                                </div>
-                            </div>
-                           <div class="work-tile">
-                                <div class="card">
-                                    <img src="images/companies/Cognizant.png" class="card-img-top" alt="Publicis Lion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Senior Consultant</h5>
-                                        <p class="card-text">Cognizant, London, England</p>
-                                        <p class="card-text">8/2019 - CURRENT</p>
-                                    </div>
-                                </div>
-                            </div>
-                           <div class="work-tile">
-                                <div class="card">
-                                    <img src="images/companies/Hewlett-Packard-Logo-2008-2014.png" class="card-img-top" alt="Publicis Lion">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Quality Lead</h5>
-                                        <p class="card-text">HP, Bengaluru, India</p>
-                                        <p class="card-text">06/2003 - 11/2006</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Add more work tiles here -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        <!-- Education Section -->
-        <div class="card">
-            <div class="card-header" id="headingEducation">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseEducation" aria-expanded="false" aria-controls="collapseEducation">
-                        Education
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseEducation" class="collapse" aria-labelledby="headingEducation" data-parent="#cvAccordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Masters in Data Science, Birkbeck University, London, 2020</li>
-                        <li>Management Acceleration Programme, Oxford Saïd Business School, 2012</li>
-                        <li>Bachelor of Commerce: Business Studies, 2003</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certifications Section -->
-        <div class="card">
-            <div class="card-header" id="headingCertifications">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseCertifications" aria-expanded="false" aria-controls="collapseCertifications">
-                        Certifications
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseCertifications" class="collapse" aria-labelledby="headingCertifications" data-parent="#cvAccordion">
-                <div class="card-body">
-                    <ul>
-                        <li>Lean Six Sigma Master Black Belt</li>
-                        <li>Prince2 Practitioner</li>
-                        <li>ISO 9001:2000</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Information Section -->
+<div class="timeline-container">
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h3>2003 - 2006</h3>
+      <p>Describe your job role, accomplishments, or company here.</p>
     </div>
-</section>
-
-<section id="projects" class="container mt-5">
-    <h2 class="mb-4">Projects</h2>
-    <div class="projects-wrapper">
-        <div class="project-tile">
-            <div class="card">
-                <img src="project1.jpg" class="card-img-top" alt="Project 1">
-                <div class="card-body">
-                    <h5 class="card-title">Bubble Chart</h5>
-                    <p class="card-text">Hiring Trends</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-tile">
-            <div class="card">
-                <img src="images/Linear Dendogram - Sentiment.jpeg" class="card-img-top" alt="Sentiment Analysis">
-                <div class="card-body">
-                    <h5 class="card-title">Sentiment Analysis</h5>
-                    <p class="card-text">Sentiment Analysis on Helpdesk Ticket Feedback using NLP and Seaborn Charts</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-tile">
-            <div class="card">
-                <img src="project3.jpg" class="card-img-top" alt="Project 3">
-                <div class="card-body">
-                    <h5 class="card-title">Value Stream Mapping</h5>
-                    <p class="card-text">Brief description of Project 3.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add more project tiles as needed -->
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h3>2006 - 2009</h3>
+      <p>Describe your job role, accomplishments, or company here.</p>
     </div>
-</section>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h3>2009 - 2015</h3>
+      <p>Describe your job role, accomplishments, or company here.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h3>2015 - 2019</h3>
+      <p>Describe your job role, accomplishments, or company here.</p>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-content">
+      <h3>2019 - Present</h3>
+      <p>Describe your current role, achievements, or projects.</p>
+    </div>
+  </div>
+</div>
 
-
-    <section id="contact">
-        <h2>Contact</h2>
-            <p>Hariharan Ramamoorthy<br>
-                <a href="mailto:hariharan.ramamoorthy@gmail.com">hariharan.ramamoorthy@gmail.com</a></p>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
-
