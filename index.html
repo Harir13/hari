@@ -33,18 +33,21 @@
         }
 
         .card .card-body {
+            font-family: "Roboto";
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
         }
         .card-img-top {
+            font-family: "Roboto";
             height: 150px; /* Set a fixed height for the images */
             width: 100%; /* Ensure the image takes the full width of the card */
             object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
             border-bottom: 0px solid #ccc; /* Optional: add a border at the bottom of the image */
         }
         .modal-body img {
+            font-family: "Roboto";
             margin-bottom: 15px;
         }
         .blog-section {
@@ -99,6 +102,12 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Hari Ramamoorthy</a>
+        <a href="mailto:askabouthari@icloud.com">
+                <img src="images/Contact/email3.png" alt="Email Me" style="width: 50px; height: 50px;">
+        </a>&nbsp;
+        <a href="https://github.com/Harir13"><img src="images/Contact/github.png" alt="Email Me" style="width: 50px; height: 50px;"></a>&nbsp;
+        <a href="https://www.linkedin.com/in/harisprofessionallife/"><img src="images/Contact/linkedin.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -109,7 +118,6 @@
                 <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
             </ul>
         </div>
     </nav>
@@ -122,7 +130,19 @@
             <h2>About Me</h2>
             <p>Accomplished Senior Manager with over 21 years of extensive experience in global talent systems and services across India, Europe, and the US. Adept at leading testing initiatives for HR information systems changes, driving stakeholder engagement, and mentoring teams for growth. Holds a Master's degree in Data Science, combining technical expertise with strategic leadership to drive organizational success and innovation.</p>
         </div>
-    </section>
+
+    <div class="container">
+        <h2>Skills</h2>
+        <ul class="list-unstyled skills-list">
+            <li>Leadership and Stakeholder Engagement</li>
+            <li>HR Systems, Data Analytics and Visualization</li>
+            <li>Project Management and PMO</li>
+            <li>Process Improvement</li>
+            <li>Team Management, Mentoring and Coaching</li>
+        </ul>
+    </div>
+</section>
+
 <script>
 particlesJS('particles-js', {
   particles: {
@@ -236,6 +256,7 @@ particlesJS('particles-js', {
     <section id="work" class="work-section text-center">
         <div class="container">
             <h2>Work Experience</h2>
+
             <!-- Tiles for work experience -->
     <!-- Work Experience Section -->
           <section id="work" class="work-section text-center">
@@ -246,37 +267,25 @@ particlesJS('particles-js', {
                       <div class="col-md-3">
                           <div class="card" data-toggle="modal" data-target="#modalResources">
                               <img src="images/companies/Resources.png" class="card-img-top" alt="Company Logo 1">
-                              <div class="card-body">
-                                  <h5 class="card-title">Resources</h5>
-                                  <p class="card-text">Role and description...</p>
-                              </div>
+
                           </div>
                       </div>
                       <div class="col-md-3">
                           <div class="card" data-toggle="modal" data-target="#modalPublicisSapient">
                               <img src="images/companies/ps.png" class="card-img-top" alt="Company Logo 2">
-                              <div class="card-body">
-                                  <h5 class="card-title">Publicis Sapient</h5>
-                                  <p class="card-text">Role and description...</p>
-                              </div>
+
                           </div>
                       </div>
                       <div class="col-md-3">
                           <div class="card" data-toggle="modal" data-target="#modalCognizant">
                               <img src="images/companies/Cognizant.png" class="card-img-top" alt="Company Logo 3">
-                              <div class="card-body">
-                                  <h5 class="card-title">Cognizant</h5>
-                                  <p class="card-text">Role and description...</p>
-                              </div>
+
                           </div>
                       </div>
                       <div class="col-md-3">
                           <div class="card" data-toggle="modal" data-target="#modalHP">
                               <img src="images/companies/hpnobg.png" class="card-img-top" alt="Company Logo 4">
-                              <div class="card-body">
-                                  <h5 class="card-title">Hewlett Packard</h5>
-                                  <p class="card-text">Role and description...</p>
-                              </div>
+
                           </div>
                       </div> <!-- Repeat for more work experiences -->
                   </div>
@@ -294,7 +303,7 @@ particlesJS('particles-js', {
                           </button>
                       </div>
                       <div class="modal-body">
-                          <p>Details about your role and experience at Resources...</p>
+                          <p class="card-text">I led the Lean Six Sigma Process Improvement and Data Analytics function for Global HR Systems, delivering significant cost savings and cost avoidance. My role involved identifying opportunities for process improvement, mentoring Lean Six Sigma projects, and leading stakeholder engagement globally to deliver product changes. I implemented AI/ML automation solutions to enhance HR process efficiency and spearheaded projects to establish HR data governance across the organization. I also supported the successful delivery of testing for SAP SuccessFactors, Onboarding, Smart Recruiters ATS, DocuSign CLM, and other integrated systems across 80 countries. As a Subject Matter Expert, I drove continuous improvement, managed vendor relationships, and advanced test automation with Tosca while fostering a process improvement culture within the team. Additionally, I mentored and coached a cross-cultural team to support leadership and employee development.</p>
                       </div>
                   </div>
               </div>
@@ -311,7 +320,7 @@ particlesJS('particles-js', {
                           </button>
                       </div>
                       <div class="modal-body">
-                          <p>Details about your role and experience at Publicis Sapient...</p>
+                          <p>I led Lean Six Sigma process improvement initiatives for HR departments in Europe, reporting directly to the CTO. I developed data and analytics dashboards to enhance decision-making and established a risk management process for Global Mobility, driving optimization efforts that resulted in over 20% in savings. Additionally, I organized a global event to showcase the impact of improvement projects, leading to operational savings exceeding £100K.</p>
                       </div>
                   </div>
               </div>
@@ -328,7 +337,7 @@ particlesJS('particles-js', {
                           </button>
                       </div>
                       <div class="modal-body">
-                          <p>Details about your role and experience at Cognizant...</p>
+                          <p> led Lean transformation efforts and developed PMO and Cost Management Governance models at a leading UK bank, facilitating weekly Cost Governance Meetings with the CIO and leadership team. I was a runner-up at both the global consulting presentation contest and the Global Process and Quality Initiatives, showcasing my innovative approach. I also designed a Process Compliance model integrating ISO, eSCM, and CMMi best practices and led regular process compliance audits for global clients. Additionally, I designed and executed Six Sigma training programs to promote continuous improvement.</p>
                       </div>
                   </div>
               </div>
@@ -345,7 +354,7 @@ particlesJS('particles-js', {
                           </button>
                       </div>
                       <div class="modal-body">
-                          <p>Details about your role and experience at Hewlett Packard...</p>
+                          <p>I initiated my career in Six Sigma, eventually progressing to software development processes. I successfully implemented a Lean Six Sigma project, delivering savings of over $50K. Additionally, I was selected as a young achiever for Hewlett Packard's Business Executive Program, recognizing my potential and contributions to business improvement.</p>
                       </div>
                   </div>
               </div>
@@ -359,6 +368,7 @@ particlesJS('particles-js', {
     <section id="portfolio" class="portfolio-section text-center">
         <div class="container">
             <h2>Portfolio</h2>
+            <br>
             <!-- Tiles for projects -->
             <div class="row">
                 <div class="col-md-4">
@@ -371,17 +381,17 @@ particlesJS('particles-js', {
                 </div>
                 <div class="col-md-4">
                     <div class="card" data-toggle="modal" data-target="#modalProject2">
-                        <img src="images/projects/project2-small.jpg" class="card-img-top" alt="Project 2">
+                        <img src="images/projects/HRIS Dashboard - Classifier.jpg" class="card-img-top" alt="Project 2">
                         <div class="card-body">
-                            <h5 class="card-title">Service Now Dashboard</h5>
+                            <h5 class="card-title">HR Data Quality Analyzer</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" data-toggle="modal" data-target="#modalProject3">
-                        <img src="images/projects/project3-small.jpg" class="card-img-top" alt="Project 3">
+                        <img src="images/projects/SNOW Dashboard.png" class="card-img-top" alt="Project 3">
                         <div class="card-body">
-                            <h5 class="card-title">Project 3</h5>
+                            <h5 class="card-title">ServiceNow Dashboard</h5>
                         </div>
                     </div>
                 </div>
@@ -389,25 +399,25 @@ particlesJS('particles-js', {
             <div class="row mt-4">
                 <div class="col-md-4">
                     <div class="card" data-toggle="modal" data-target="#modalProject4">
-                        <img src="images/projects/project4-small.jpg" class="card-img-top" alt="Project 4">
+                        <img src="images/projects/A3 Thnking Landscape.png" class="card-img-top" alt="Project 4">
                         <div class="card-body">
-                            <h5 class="card-title">Project 4</h5>
+                            <h5 class="card-title">A3 Thinking - Lean six Sigma</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" data-toggle="modal" data-target="#modalProject5">
-                        <img src="images/projects/project5-small.jpg" class="card-img-top" alt="Project 5">
+                        <img src="images/projects/Dashboards.png" class="card-img-top" alt="Project 5">
                         <div class="card-body">
-                            <h5 class="card-title">Project 5</h5>
+                            <h5 class="card-title">Power BI Dashboards</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" data-toggle="modal" data-target="#modalProject6">
-                        <img src="images/projects/project6-small.jpg" class="card-img-top" alt="Project 6">
+                        <img src="images/projects/JIRA Dashboard.png" class="card-img-top" alt="Project 6">
                         <div class="card-body">
-                            <h5 class="card-title">Project 6</h5>
+                            <h5 class="card-title">JIRA Dashboards</h5>
                         </div>
                     </div>
                 </div>
@@ -420,19 +430,17 @@ particlesJS('particles-js', {
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalProject1Label">Project 1</h5>
+                    <h5 class="modal-title" id="modalProject1Label">Sentiment Analysis</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project1-large.jpg" class="img-fluid" alt="Project 1">
-                    <h5>Background</h5>
-                    <p>Details about the background of Project 1...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 1...</p>
+                    <img src="images/projects/Linear Dendogram - Sentiment.jpeg" class="img-fluid" alt="Project 1">
+                    <h5>Background Analysis</h5>
+                    <p>A sentiment analysis on responses to helpdesk tickets related to an HR process. This analysis helped to gauge employee satisfaction and pinpoint areas needing improvement in the ticket resolution process. By analyzing feedback data, I was able to identify patterns and trends in user sentiment, providing valuable insights to enhance the HR support experience.</p>
                     <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 1...</p>
+                    <p>For this project, I utilized natural language processing (NLP) libraries in Python, such as NLTK and TextBlob, to classify and quantify sentiment within ticket responses. The analysis results were visualized using data visualization libraries, enabling a clear presentation of findings and recommended actions.</p>
                 </div>
             </div>
         </div>
@@ -443,19 +451,17 @@ particlesJS('particles-js', {
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalProject2Label">Project 2</h5>
+                    <h5 class="modal-title" id="modalProject2Label">HR Data Classifier</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project2-large.jpg" class="img-fluid" alt="Project 2">
-                    <h5>Background</h5>
-                    <p>Details about the background of Project 2...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 2...</p>
+                    <img src="images/projects/HRIS Dashboard - Classifier.jpg" class="img-fluid" alt="Project 2">
+                    <h5>Background Analysis</h5>
+                    <p>HR Data Quality Analyzer is a python Flask Based portal to assess the quality of data in the core HR system. Using machine learning classifiers, this tool evaluated data accuracy and completeness, identifying specific groups needing targeted communication and training. This approach ensured that data quality issues were systematically addressed and that corrective actions were prioritized based on data integrity insights.</p>
                     <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 2...</p>
+                    <p>The HR Data Classifier project incorporated a range of machine learning techniques to evaluate and improve data quality. Key models used included K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, Decision Trees, and a Voting Classifier to ensure robust predictions. Principal Component Analysis (PCA) was applied to reduce dimensionality and enhance visualization. Together, these tools provided a comprehensive analysis of data patterns, highlighting areas where targeted communication and training could drive improvements</p>
                 </div>
             </div>
         </div>
@@ -472,13 +478,11 @@ particlesJS('particles-js', {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project3-large.jpg" class="img-fluid" alt="Project 3">
-                    <h5>Background</h5>
-                    <p>Details about the background of Project 3...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 3...</p>
+                    <img src="images/projects/SNOW Dashboard.png" class="img-fluid" alt="Project 3">
+                    <h5>Background Analysis</h5>
+                    <p>SNOW (ServiceNow) Dashboard to monitor key metrics and performance indicators. This dashboard included a variety of visualizations to offer a holistic view of operational data, including control charts for process stability analysis, pie charts for categorical distribution, and heat maps to identify areas with high activity or bottlenecks. These tools enabled quick insights and facilitated data-driven decision-making for process improvements.</p>
                     <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 3...</p>
+                    <p>The SNOW Dashboard was created using ServiceNow's reporting tools and integrated with visualization libraries for enhanced insights. Control charts provided insights into trends and variances over time, while pie charts displayed data composition, and heat maps helped visualize high-frequency areas, making it easy to identify priority issues at a glance.</p>
                 </div>
             </div>
         </div>
@@ -489,19 +493,17 @@ particlesJS('particles-js', {
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalProject4Label">Project 4</h5>
+                    <h5 class="modal-title" id="modalProject4Label">A3 Thinking - Lean Six Sigma</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project4-large.jpg" class="img-fluid" alt="Project 4">
-                    <h5>Background</h5>
-                    <p>Details about the background of Project 4...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 4...</p>
+                    <img src="images/projects/A3 Thnking Landscape.png" class="img-fluid" alt="Project 4">
+                    <h5>Background Analysis</h5>
+                    <p>The payroll process was experiencing inefficiencies, with delays and errors impacting employee satisfaction and creating compliance risks. Analysis revealed bottlenecks due to redundant manual steps, data inconsistencies, and approval delays, which collectively increased the cycle time and error rate.</p>
                     <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 4...</p>
+                    <p>Using Value Stream Mapping as a primary tool, we mapped the entire payroll process to identify non-value-added steps and pinpoint areas of waste. This analysis highlighted key issues such as lack of standardization, manual data entry errors, and approval bottlenecks, which were all contributing to inefficiencies.</p>
                 </div>
             </div>
         </div>
@@ -518,13 +520,24 @@ particlesJS('particles-js', {
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project5-large.jpg" class="img-fluid" alt="Project 5">
+                    <img src="images/projects/Dashboards.png" class="img-fluid" alt="Project 5">
                     <h5>Background</h5>
-                    <p>Details about the background of Project 5...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 5...</p>
+                    <p>To improve decision-making and operational efficiency, I developed several Power BI dashboards to showcase key HR data analytics. These dashboards were designed to provide insights into various aspects of HR operations, including the recruiting process, compensation analysis, productivity analysis, and data quality analysis.</p>
+                    <p>Each dashboard focused on providing actionable insights:
+                        <ul>
+                          <li><strong>Recruiting Process:</strong> Analyzed key recruitment metrics such as time-to-hire, candidate sources, and pipeline status.</li>
+                          <li><strong>Compensation Analysis:</strong> Compared compensation trends across departments, roles, and geographies to ensure alignment with market standards.</li>
+                          <li><strong>Productivity Analysis:</strong> Evaluated employee performance and productivity metrics to identify areas for improvement and recognition.</li>
+                          <li><strong>Data Quality Analysis:</strong> Assessed the completeness, accuracy, and consistency of HR data to drive data governance improvements.</p></li>
+                        </ul>
                     <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 5...</p>
+                    <p>Power BI: Developed interactive dashboards with various visualizations, filters, and drill-down capabilities.
+                    <ul>
+                        <li><strong>DAX (Data Analysis Expressions):</strong> Utilized for advanced calculations and custom metrics.</li>
+                        <li><strong>Power Query:</strong> Used for initial data transformation and cleaning within Power BI.</li>
+                        <li><strong>Python:</strong> Leveraged for more advanced data cleaning, transformation, and integration tasks, ensuring the data was in the right format for analysis.</li>
+                    </ul>
+                    The combination of these tools enabled the creation of dynamic, user-friendly dashboards that provided real-time insights, empowering HR to optimize processes and improve decision-making.</p>
                 </div>
             </div>
         </div>
@@ -535,19 +548,21 @@ particlesJS('particles-js', {
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalProject6Label">Project 6</h5>
+                    <h5 class="modal-title" id="modalProject6Label">JIRA Dashboard</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="images/projects/project6-large.jpg" class="img-fluid" alt="Project 6">
-                    <h5>Background</h5>
-                    <p>Details about the background of Project 6...</p>
-                    <h5>Analysis</h5>
-                    <p>Details about the analysis of Project 6...</p>
-                    <h5>Tools Used</h5>
-                    <p>Details about the tools used in Project 6...</p>
+                    <img src="images/projects/JIRA Dashboard.png" class="img-fluid" alt="Project 6">
+                      <h5>JIRA Dashboards: Test Management for Global HR System Implementation</h5>
+                      <p>As part of the global rollout of HR systems across over 80 countries, effective test management was essential to ensure smooth implementation and minimize issues during deployment. I developed a series of <strong>JIRA Dashboards</strong> to track test progress, manage issues, and ensure that all test cases were executed and resolved on time. The dashboards were designed to provide real-time visibility into test activities, including:</p>
+                      <ul>
+                        <li><strong>Test Execution Progress:</strong> Monitored the status of test cycles and individual test cases, tracking completion rates and open issues.</li>
+                        <li><strong>Issue Management:</strong> Highlighted critical defects and their impact on the overall project timeline, enabling quick resolution.</li>
+                        <li><strong>Test Coverage:</strong> Ensured that all HR system modules were thoroughly tested across different regions and user groups.</li>
+                        <li><strong>Global Tracking:</strong> Allowed for tracking and comparison of test progress across countries, ensuring consistency in test results and process adherence.</li>
+                      </ul>
                 </div>
             </div>
         </div>
@@ -625,33 +640,17 @@ particlesJS('particles-js', {
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog-section text-center">
-        <div class="container">
-            <h2>Blog</h2>
-            <p>Check out my latest posts!</p>
-            <a href="blog.html" class="btn btn-primary">Go to Blog</a>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
-            <p>Contact information here...</p>
-            <p>Social media links here...</p>
-            <form onsubmit="sendMail(); return false;">
-                <div class="form-group">
-                    <label for="contactFormEmail">Email address</label>
-                    <input type="email" class="form-control" id="contactFormEmail" placeholder="Enter email" required>
-                </div>
-                <div class="form-group">
-                    <label for="contactFormMessage">Message</label>
-                    <textarea class="form-control" id="contactFormMessage" rows="3" required></textarea>
-                </div>
-                <button type="submit" class=" -primary">Submit</button>
-            </form>
-        </div>
-    </footer>
+            <p>I’d love to hear from you! Whether you have a question, a project in mind, or just want to connect, feel free to reach out. You can contact me directly through the form below or connect with me on social media. Let’s start a conversation and explore how we can collaborate!</p>
+            <a href="mailto:askabouthari@icloud.com">
+                <img src="images/Contact/email3.png" alt="Email Me" style="width: 50px; height: 50px;">
+            </a>
+            <a href="https://github.com/Harir13"><img src="images/Contact/github.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.linkedin.com/in/harisprofessionallife/"><img src="images/Contact/linkedin.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
