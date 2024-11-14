@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hari Ramamoorthy</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+
+
     <style >
         /* Custom styles for different sections */
         .about-section { background: #f0f0f0; padding: 60px 0; }
         .work-section { background: #d0d0d0; padding: 60px 0; }
-        .education-section { background: #d0d0d0; padding: 60px 0; }
-        .certifications-section { background: #c0c0c0; padding: 60px 0; }
         .portfolio-section { background: #ffffff; padding: 60px 0; }
-        .footer { background: #c0c0c0; padding: 40px 0; }
+        .education-section { background: #d0d0d0; padding: 60px 0; }
+        .certifications-section { background: #f0f0f0; padding: 60px 0; }
+        .footer { background: #ffffff; padding: 40px 0; }
         /* Styles for uniform card sizes */
           body {
-             font-family: Roboto, sans-serif;
+             font-family: "Libre Franklin", sans-serif;
                 }
         .card {
-            font-family: Arial, sans-serif;
+            font-family: Libre Franklin, sans-serif;
             border: 0px solid #ccc; /* Thin grey outline */
             transition: transform 0.1s, box-shadow 0.1s; /* Smooth transition for the hover effect */
             background-color: transparent;
         }
 
         .card-title {
-            font-family: Arial, sans-serif;
-
-
+            font-family: Libre Franklin, sans-serif;
+            font-size: 16px;
+        }
+        .card-text {
+            font-family: Libre Franklin, sans-serif;
+            font-size: 14px;
+            text-align: left;
         }
         .card:hover {
             transform: scale(1.05); /* Slightly enlarge the card on hover */
@@ -37,9 +46,20 @@
         .card img {
             height: 200px;
             width: 100%;
-            object-fit: center; /* Maintain aspect ratio while covering the entire area */
+            object-fit: contain; /* Maintain aspect ratio while covering the entire area */
             background-color: transparent;
         }
+
+        .card .card-edu {
+            height: 80px;
+            width: 100%;
+            font-family: Libre Franklin, sans-serif;
+            object-fit: contain; /* Maintain aspect ratio while covering the entire area */
+            background-color: transparent;
+            text-align: center;
+
+        }
+
 
         .card .card-body {
 
@@ -50,13 +70,21 @@
         }
         .card-img-top {
 
-            height: 150px; /* Set a fixed height for the images */
+            height: 100px; /* Set a fixed height for the images */
+            width: 100%; /* Ensure the image takes the full width of the card */
+            object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
+            border-bottom: 0px solid #ccc; /* Optional: add a border at the bottom of the image */
+        }
+
+        .card-img-tiny {
+
+            height: 50px; /* Set a fixed height for the images */
             width: 100%; /* Ensure the image takes the full width of the card */
             object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
             border-bottom: 0px solid #ccc; /* Optional: add a border at the bottom of the image */
         }
         .modal-body img {
-            font-family: "Roboto";
+            font-family: Libre Franklin;
             margin-bottom: 15px;
         }
         .blog-section {
@@ -84,7 +112,11 @@
             padding: 60px 0;
             overflow: hidden;
         }
-
+        .flex-container {
+            display: flex;
+            align-items: center; /* vertically center the items */
+            gap: 10px; /* space between items */
+        }
         #particles-js {
             position: absolute;
             width: 100%;
@@ -305,74 +337,90 @@ particlesJS('particles-js', {
               </div>
           </section>
 
-          <!-- Modal for Resources -->
+
+            <!-- Modal for Resources -->
           <div class="modal fade" id="modalResources" tabindex="-1" role="dialog" aria-labelledby="modalResourcesLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="modalResourcesLabel">Resources</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
+                      <div >
+                          <h5 class="modal-title" id="modalResourcesLabel">Publicis Re:Sources<img src="images/Countries/usa.png" alt="USA" class="card-img-tiny"></h5>
+
+                          <p>
+                          <ul class="card-text">
+                          <li>Lead Testing and Data Analytics function for Global HR Systems, delivering significant cost savings and cost avoidance.</li>
+                          <li>Identified opportunities for process improvement, mentored Lean Six Sigma projects, and led stakeholder engagement globally to deliver product changes.</li>
+                          <li>Implemented AI/ML automation solutions to enhance HR process efficiency and spearheaded projects to establish HR data governance across the organization.</li>
+                          <li>Supported successful delivery of testing for SAP SuccessFactors, Onboarding, Smart Recruiters ATS, DocuSign CLM, and other integrated systems across 80 countries.</li>
+                          <li>Served as Subject Matter Expert, driving continuous improvement, managing vendor relationships, and advancing test automation with Tosca.</li>
+                          <li>Fostered a process improvement culture within the team.</li>
+                          <li>Mentored and coached a cross-cultural team to support leadership and employee development.</li>
+                          </ul>
+                          </p>
                       </div>
-                      <div class="modal-body">
-                          <p class="card-text">Lead Testing and Data Analytics function for Global HR Systems, delivering significant cost savings and cost avoidance. My role involved identifying opportunities for process improvement, mentoring Lean Six Sigma projects, and leading stakeholder engagement globally to deliver product changes. I implemented AI/ML automation solutions to enhance HR process efficiency and spearheaded projects to establish HR data governance across the organization. I also supported the successful delivery of testing for SAP SuccessFactors, Onboarding, Smart Recruiters ATS, DocuSign CLM, and other integrated systems across 80 countries. As a Subject Matter Expert, I drove continuous improvement, managed vendor relationships, and advanced test automation with Tosca while fostering a process improvement culture within the team. Additionally, I mentored and coached a cross-cultural team to support leadership and employee development.</p>
-                      </div>
-                  </div>
+                </div>
               </div>
           </div>
-
-          <!-- Modal for Publicis Sapient -->
+             <!-- Modal for Sapient -->
           <div class="modal fade" id="modalPublicisSapient" tabindex="-1" role="dialog" aria-labelledby="modalPublicisSapientLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="modalPublicisSapientLabel">Publicis Sapient</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
+                      <div >
+                          <h5 class="modal-title" id="modalPublicisSapientLabel">Publicis Sapient<img src="images/Countries/usa.png" alt="USA" class="card-img-tiny"></h5>
+
+                          <p>
+                          <ul class="card-text">
+                          <li>Led Lean Six Sigma process improvement initiatives for HR departments in Europe, reporting directly to the CTO.</li>
+                          <li>Developed data and analytics dashboards to enhance decision-making.</li>
+                          <li>Established a risk management process for Global Mobility, driving optimization efforts that resulted in over 20% in savings.</li>
+                          <li>Organized a global event to showcase the impact of improvement projects, leading to operational savings exceeding £100K.</li>
+                          </ul>
+                          </p>
                       </div>
-                      <div class="modal-body">
-                          <p>Led Lean Six Sigma process improvement initiatives for HR departments in Europe, reporting directly to the CTO. I developed data and analytics dashboards to enhance decision-making and established a risk management process for Global Mobility, driving optimization efforts that resulted in over 20% in savings. Additionally, I organized a global event to showcase the impact of improvement projects, leading to operational savings exceeding £100K.</p>
-                      </div>
-                  </div>
-              </div>
+                </div>
+            </div>
           </div>
+
 
           <!-- Modal for Cognizant -->
           <div class="modal fade" id="modalCognizant" tabindex="-1" role="dialog" aria-labelledby="modalCognizantLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title" id="modalCognizantLabel">Cognizant</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                          </button>
-                      </div>
-                      <div class="modal-body">
-                          <p>Led Digital Transformation efforts and developed PMO and Cost Management Governance models at a leading UK bank, facilitating weekly Cost Governance Meetings with the CIO and leadership team. I was a runner-up at both the global consulting presentation contest and the Global Process and Quality Initiatives, showcasing my innovative approach. I also designed a Process Compliance model integrating ISO, eSCM, and CMMi best practices and led regular process compliance audits for global clients. Additionally, I designed and executed Six Sigma training programs to promote continuous improvement.</p>
-                      </div>
+                          <h5 class="modal-title" id="modalCognizantLabel">Cognizant<img src="images/Countries/uk.png" alt="UK" class="card-img-tiny"></h5>
+                          <p>
+                          <ul class="card-text">
+                              <li>Led Digital Transformation efforts and developed PMO and Cost Management Governance models at a leading UK bank, facilitating weekly Cost Governance Meetings with the CIO and leadership team.</li>
+                              <li>Runner-up at both the global consulting presentation contest and the Global Process and Quality Initiatives, showcasing an innovative approach.</li>
+                              <li>Designed a Process Compliance model integrating ISO, eSCM, and CMMi best practices and led regular process compliance audits for global clients.</li>
+                              <li>Designed and executed Six Sigma training programs to promote continuous improvement.</li>
+                          </ul>
+                          </p>
+
                   </div>
               </div>
           </div>
+        </div>
 
           <!-- Modal for Hewlett Packard -->
           <div class="modal fade" id="modalHP" tabindex="-1" role="dialog" aria-labelledby="modalHPLabel" aria-hidden="true">
               <div class="modal-dialog" role="document">
                   <div class="modal-content">
                       <div class="modal-header">
-                          <h5 class="modal-title" id="modalHPLabel">Hewlett Packard</h5>
+                          <h5 class="modal-title" id="modalHPLabel">Hewlett Packard<img src="images/Countries/india.png" alt="India" class="card-img-tiny"></h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                           </button>
                       </div>
                       <div class="modal-body">
-                          <p>I initiated my career in Six Sigma, eventually progressing to software development processes. I successfully implemented a Lean Six Sigma project, delivering savings of over $50K. Additionally, I was selected as a young achiever for Hewlett Packard's Business Executive Program, recognizing my potential and contributions to business improvement.</p>
+                          <p><ul class="card-text">
+                            <li>Initiated my career in Six Sigma, eventually progressing to software development processes.</li>
+                            <li>Successfully implemented a Lean Six Sigma project, delivering savings of over $50K.</li>
+                            <li>Selected as a young achiever for Hewlett Packard's Business Executive Program, recognizing my potential and contributions to business improvement.</li>
+                            </ul>
+                          </p>
                       </div>
                   </div>
               </div>
           </div>
-                <!-- Repeat for more projects -->
             </div>
         </div>
     </section>
@@ -588,28 +636,28 @@ particlesJS('particles-js', {
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/Education/bbk.png" class="card-img-top" alt="Education 1">
+                        <img src="images/Education/bbk.png" class="card-edu" alt="Education 1">
                         <div class="card-body">
                             <h5 class="card-title">Masters in Data Science</h5>
-                            <p class="card-text">2020</p>
+                            <p class="card-title">2020</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/Education/said.png" class="card-img-top" alt="Education 2">
+                        <img src="images/Education/said.png" class="card-edu" alt="Education 2">
                         <div class="card-body">
                             <h5 class="card-title">Management Programme</h5>
-                            <p class="card-text">2012</p>
+                            <p class="card-title">2012</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/Education/Madras_University_Seal.svg.png" class="card-img-top" alt="Education 3">
+                        <img src="images/Education/Madras_University_Seal.svg.png" class="card-edu" alt="Education 3">
                         <div class="card-body">
                             <h5 class="card-title">Bachelor of Commerce</h5>
-                            <p class="card-text">2003</p>
+                            <p class="card-title">2003</p>
                         </div>
                     </div>
                 </div>
@@ -624,28 +672,28 @@ particlesJS('particles-js', {
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/certification/Prince2nobg.png" class="card-img-top" alt="Certification 1">
+                        <img src="images/certification/Prince2nobg.png" class="card-edu alt="Certification 1">
                         <div class="card-body">
                             <h5 class="card-title">Prince 2 Practitioner</h5>
-                            <p class="card-text">2015</p>
+                            <p class="√">2015</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/certification/6sigma.png" class="card-img-top" alt="Certification 2">
+                        <img src="images/certification/6sigma.png" class="card-edu" alt="Certification 2">
                         <div class="card-body">
                             <h5 class="card-title">Lean Six Sigma Black Belt</h5>
-                            <p class="card-text">2006</p>
+                            <p class="ç">2006</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/certification/ISO.png" class="card-img-top" alt="Certification 3">
+                        <img src="images/certification/ISO.png" class="card-edu" alt="Certification 3">
                         <div class="card-body">
                             <h5 class="card-title">ISO 9001:2000 Lead Auditor</h5>
-                            <p class="card-text">2006</p>
+                            <p class="card-title">2006</p>
                         </div>
                     </div>
                 </div>
@@ -658,6 +706,7 @@ particlesJS('particles-js', {
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
+            <h2>Contact</h2>
             <p>I’d love to hear from you! Whether you have a question, a project in mind, or just want to connect, feel free to reach out. You can contact me directly through email or connect with me on social media. Let’s start a conversation and explore how we can collaborate!</p>
             <a href="mailto:askabouthari@icloud.com">
                 <img src="images/Contact/email3.png" alt="Email Me" style="width: 50px; height: 50px;">
