@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Ramamoorthy</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+    <meta name="description" content="A portfolio site showcasing analytics projects and data visualizations by Hari.">
+    <meta name="keywords" content="analytics, data visualization, portfolio, Hari, data science">
+    <meta name="author" content="Hari">
+    <title>Analytics Hari | Portfolio and Data Visualizations</title>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ERYZFPBVW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4ERYZFPBVW');
+    </script>
+    <style >
+        /* Custom styles for different sections */
+        .about-section { background: #f0f0f0; padding: 60px 0; }
+        .work-section { background: #d0d0d0; padding: 60px 0; }
+        .portfolio-section { background: #ffffff; padding: 60px 0; }
+        .education-section { background: #d0d0d0; padding: 60px 0; }
+        .certifications-section { background: #f0f0f0; padding: 60px 0; }
+        .footer { background: #ffffff; padding: 40px 0; }
+        /* Styles for uniform card sizes */
+          body {
+             font-family: "Libre Franklin", sans-serif;
+                }
+        .card {
+            font-family: Libre Franklin, sans-serif;
+            border: 0px solid #ccc; /* Thin grey outline */
+            transition: transform 0.1s, box-shadow 0.1s; /* Smooth transition for the hover effect */
+            background-color: transparent;
+        }
+
+        .card-title {
+            font-family: Libre Franklin, sans-serif;
+            font-size: 16px;
+        }
+        .card-text {
+            font-family: Libre Franklin, sans-serif;
+            font-size: 14px;
+            text-align: left;
+        }
+        .card:hover {
+            transform: scale(1.05); /* Slightly enlarge the card on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow on hover */
+        }
+
+        .card img {
+            height: 200px;
+            width: 100%;
+            object-fit: contain; /* Maintain aspect ratio while covering the entire area */
+            background-color: transparent;
+        }
+
+        .card .card-edu {
+            height: 80px;
+            width: 100%;
+            font-family: Libre Franklin, sans-serif;
+            object-fit: contain; /* Maintain aspect ratio while covering the entire area */
+            background-color: transparent;
+            text-align: center;
+
+        }
+
+
+        .card .card-body {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        .card-img-top {
+
+            height: 100px; /* Set a fixed height for the images */
+            width: 100%; /* Ensure the image takes the full width of the card */
+            object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
+            border-bottom: 0px solid #ccc; /* Optional: add a border at the bottom of the image */
+        }
+
+        .card-img-tiny {
+
+            height: 50px; /* Set a fixed height for the images */
+            width: 100%; /* Ensure the image takes the full width of the card */
+            object-fit: contain; /* Maintain aspect ratio and fit within the bounds */
+            border-bottom: 0px solid #ccc; /* Optional: add a border at the bottom of the image */
+        }
+        .modal-body img {
+            font-family: Libre Franklin;
+            margin-bottom: 15px;
+        }
+        .blog-section {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .blog-post h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .blog-post p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1; /* Ensure the content is in front of the particles */
+        }
+
+        .about-section {
+            position: relative;
+            padding: 60px 0;
+            overflow: hidden;
+        }
+        .flex-container {
+            display: flex;
+            align-items: center; /* vertically center the items */
+            gap: 10px; /* space between items */
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0; /* Ensure particles are behind the content */
+        }
+
+    </style>
+    <script>
+        function sendMail() {
+            var email = document.getElementById('contactFormEmail').value;
+            var message = document.getElementById('contactFormMessage').value;
+            var subject = "Portfolio Contact Form Submission";
+            var body = "Email: " + email + "\n\nMessage:\n" + message;
+            window.location.href = "mailto:your-email@example.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hari Ramamoorthy</a>
+        <a href="mailto:askabouthari@icloud.com">
+                <img src="images/Contact/email3.png" alt="Email Me" style="width: 50px; height: 50px;">
+        </a>&nbsp;
+        <a href="https://github.com/Harir13" target="_blank"><img src="images/Contact/github.png" alt="Email Me" style="width: 50px; height: 50px;"></a>&nbsp;
+        <a href="https://www.linkedin.com/in/harisprofessionallife/" target="_blank"><img src="images/Contact/linkedin.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+
+    <section id="about" class="about-section text-center position-relative">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Associate Director with 23 years of experience leading HR technology transformation and people analytics across India, the UK, and the US — currently owning the global HR systems roadmap for 80,000+ employees across 80+ countries at Publicis.
+I sit at the intersection of three things that rarely travel together: enterprise HRIS delivery, hands-on data science, and process discipline. I hold a Master's in Data Science from Birkbeck, University of London, and I still write Python — building NLP classifiers, sentiment models, and ML tools on real HR operational data. I'm also a Lean Six Sigma Master Black Belt, which means I don't just surface insights; I redesign the process around them.
+Most recently, that combination produced a 35% productivity gain in HR support operations — same team, significantly more output — by applying machine learning to service desk data and redesigning workflows through Six Sigma.
+I've spent my career in diverse environments: starting in technology quality at HP in India, moving into global consulting at Cognizant in the UK, leading European HR transformation at Publicis Sapient, and now directing global HR technology at scale in the US. That breadth means I understand stakeholders intuitively — whether they're a CIO in London, an HR lead in Singapore, or a vendor team in Germany.
+I'm selectively exploring Director-level opportunities in HR Technology, People Analytics, and HR Transformation.</p>
+        </div>
+    <div class="container">
+        <h2>Skills</h2>
+        <ul class="list-unstyled skills-list">
+            <li>Leadership and Stakeholder Engagement</li>
+            <li>HR Systems, Data Analytics and Visualization</li>
+            <li>Project Management and PMO</li>
+            <li>Process Improvement</li>
+            <li>Team Management, Mentoring and Coaching</li>
+        </ul>
+    </div>
+</section>
+
+<script>
+particlesJS('particles-js', {
+  particles: {
+    number: {
+      value: 100,
+      density: {
+        enable: true,
+        value_area: 800
+      }
+    },
+    color: {
+      value: '#a0a0a0'
+    },
+    shape: {
+      type: 'circle',
+      stroke: {
+        width: 0,
+        color: '#a0a0a0'
+      },
+      polygon: {
+        nb_sides: 5
+      }
+    },
+    opacity: {
+      value: 0.9,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: '#a0a0a0',
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 3,
+      direction: 'none',
+      random: false,
+      straight: false,
+      out_mode: 'out',
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: 'canvas',
+    events: {
+      onhover: {
+        enable: true,
+        mode: 'repulse'
+      },
+      onclick: {
+        enable: true,
+        mode: 'push'
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true
+});
+</script>
+
+
+    <!-- Work Experience Section -->
+    <section id="work" class="work-section text-center">
+        <div class="container">
+            <h2>Work Experience</h2>
+
+            <!-- Tiles for work experience -->
+    <!-- Work Experience Section -->
+          <section id="work" class="work-section text-center">
+              <div class="container">
+
+                  <!-- Tiles for work experience -->
+                  <div class="row">
+                      <div class="col-md-3">
+                          <div class="card" data-toggle="modal" data-target="#modalResources">
+                              <img src="images/companies/resources.png" class="card-img-top" alt="Company Logo 1">
+                              <h6>Senior Manager - Talent Systems</h6>
+                              <h8>2019 to Current</h8>
+
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card" data-toggle="modal" data-target="#modalPublicisSapient">
+                              <img src="images/companies/ps.png" class="card-img-top" alt="Company Logo 2">
+                              <h6>Manager - People Systems</h6>
+                              <h8>2015 to 2019</h8>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card" data-toggle="modal" data-target="#modalCognizant">
+                              <img src="images/companies/Cognizant.png" class="card-img-top" alt="Company Logo 3">
+                              <h6>Senior Consultant - Process</h6>
+                              <h8>2006 to 2015</h8>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card" data-toggle="modal" data-target="#modalHP">
+                              <img src="images/companies/hpnobg.png" class="card-img-top" alt="Company Logo 4">
+                              <h6>Quality Lead - Process</h6>
+                              <h8>2003 to 2006</h8>
+                          </div>
+                      </div> <!-- Repeat for more work experiences -->
+                  </div>
+              </div>
+          </section>
+
+
+            <!-- Modal for Resources -->
+          <div class="modal fade" id="modalResources" tabindex="-1" role="dialog" aria-labelledby="modalResourcesLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div >
+                          <h5 class="modal-title" id="modalResourcesLabel">Publicis Re:Sources<img src="images/Countries/usa.png" alt="USA" class="card-img-tiny"></h5>
+
+                          <p>
+                          <ul class="card-text">
+                          <li>Lead Testing and Data Analytics function for Global HR Systems, delivering significant cost savings and cost avoidance.</li>
+                          <li>Identified opportunities for process improvement, mentored Lean Six Sigma projects, and led stakeholder engagement globally to deliver product changes.</li>
+                          <li>Implemented AI/ML automation solutions to enhance HR process efficiency and spearheaded projects to establish HR data governance across the organization.</li>
+                          <li>Supported successful delivery of testing for SAP SuccessFactors, Onboarding, Smart Recruiters ATS, DocuSign CLM, and other integrated systems across 80 countries.</li>
+                          <li>Served as Subject Matter Expert, driving continuous improvement, managing vendor relationships, and advancing test automation with Tosca.</li>
+                          <li>Fostered a process improvement culture within the team.</li>
+                          <li>Mentored and coached a cross-cultural team to support leadership and employee development.</li>
+                          </ul>
+                          </p>
+                      </div>
+                </div>
+              </div>
+          </div>
+             <!-- Modal for Sapient -->
+          <div class="modal fade" id="modalPublicisSapient" tabindex="-1" role="dialog" aria-labelledby="modalPublicisSapientLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div >
+                          <h5 class="modal-title" id="modalPublicisSapientLabel">Publicis Sapient<img src="images/Countries/usa.png" alt="USA" class="card-img-tiny"></h5>
+
+                          <p>
+                          <ul class="card-text">
+                          <li>Led Lean Six Sigma process improvement initiatives for HR departments in Europe, reporting directly to the CTO.</li>
+                          <li>Developed data and analytics dashboards to enhance decision-making.</li>
+                          <li>Established a risk management process for Global Mobility, driving optimization efforts that resulted in over 20% in savings.</li>
+                          <li>Organized a global event to showcase the impact of improvement projects, leading to operational savings exceeding £100K.</li>
+                          </ul>
+                          </p>
+                      </div>
+                </div>
+            </div>
+          </div>
+
+
+          <!-- Modal for Cognizant -->
+          <div class="modal fade" id="modalCognizant" tabindex="-1" role="dialog" aria-labelledby="modalCognizantLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                          <h5 class="modal-title" id="modalCognizantLabel">Cognizant<img src="images/Countries/uk.png" alt="UK" class="card-img-tiny"></h5>
+                          <p>
+                          <ul class="card-text">
+                              <li>Led Digital Transformation efforts and developed PMO and Cost Management Governance models at a leading UK bank, facilitating weekly Cost Governance Meetings with the CIO and leadership team.</li>
+                              <li>Runner-up at both the global consulting presentation contest and the Global Process and Quality Initiatives, showcasing an innovative approach.</li>
+                              <li>Designed a Process Compliance model integrating ISO, eSCM, and CMMi best practices and led regular process compliance audits for global clients.</li>
+                              <li>Designed and executed Six Sigma training programs to promote continuous improvement.</li>
+                          </ul>
+                          </p>
+
+                  </div>
+              </div>
+          </div>
+        </div>
+
+          <!-- Modal for Hewlett Packard -->
+          <div class="modal fade" id="modalHP" tabindex="-1" role="dialog" aria-labelledby="modalHPLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="modalHPLabel">Hewlett Packard<img src="images/Countries/india.png" alt="India" class="card-img-tiny"></h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <p><ul class="card-text">
+                            <li>Initiated my career in Six Sigma, eventually progressing to software development processes.</li>
+                            <li>Successfully implemented a Lean Six Sigma project, delivering savings of over $50K.</li>
+                            <li>Selected as a young achiever for Hewlett Packard's Business Executive Program, recognizing my potential and contributions to business improvement.</li>
+                            </ul>
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+
+    <section id="portfolio" class="portfolio-section text-center">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <br>
+            <!-- Tiles for projects -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject1">
+                        <img src="images/projects/Linear Dendogram - Sentiment.jpeg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Sentiment Analysis</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject2">
+                        <img src="images/projects/HRIS Dashboard - Classifier.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">HR Data Quality Analyzer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject3">
+                        <img src="images/projects/SNOW Dashboard.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">ServiceNow Dashboard</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject4">
+                        <img src="images/projects/A3 Thnking Landscape.png" class="card-img-top" alt="Project 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Lean Six Sigma</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject5">
+                        <img src="images/projects/Dashboards.png" class="card-img-top" alt="Project 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Power BI Dashboards</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card" data-toggle="modal" data-target="#modalProject6">
+                        <img src="images/projects/JIRA Dashboard.png" class="card-img-top" alt="Project 6">
+                        <div class="card-body">
+                            <h5 class="card-title">JIRA Dashboards</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Modal for Project 1 -->
+    <div class="modal fade" id="modalProject1" tabindex="-1" role="dialog" aria-labelledby="modalProject1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject1Label">Sentiment Analysis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/Linear Dendogram - Sentiment.jpeg" class="img-fluid" alt="Project 1">
+                    <h5>Background Analysis</h5>
+                    <p>A sentiment analysis on responses to helpdesk tickets related to an HR process. This analysis helped to gauge employee satisfaction and pinpoint areas needing improvement in the ticket resolution process. By analyzing feedback data, I was able to identify patterns and trends in user sentiment, providing valuable insights to enhance the HR support experience.</p>
+                    <h5>Tools Used</h5>
+                    <p>For this project, I utilized natural language processing (NLP) libraries in Python, such as NLTK and TextBlob, to classify and quantify sentiment within ticket responses. The analysis results were visualized using data visualization libraries, enabling a clear presentation of findings and recommended actions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 2 -->
+    <div class="modal fade" id="modalProject2" tabindex="-1" role="dialog" aria-labelledby="modalProject2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject2Label">HR Data Classifier</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/HRIS Dashboard - Classifier.jpg" class="img-fluid" alt="Project 2">
+                    <h5>Background Analysis</h5>
+                    <p>HR Data Quality Analyzer is a python Flask Based portal to assess the quality of data in the core HR system. Using machine learning classifiers, this tool evaluated data accuracy and completeness, identifying specific groups needing targeted communication and training. This approach ensured that data quality issues were systematically addressed and that corrective actions were prioritized based on data integrity insights.</p>
+                    <h5>Tools Used</h5>
+                    <p>The HR Data Classifier project incorporated a range of machine learning techniques to evaluate and improve data quality. Key models used included K-Nearest Neighbors (KNN), Logistic Regression, Naive Bayes, Decision Trees, and a Voting Classifier to ensure robust predictions. Principal Component Analysis (PCA) was applied to reduce dimensionality and enhance visualization. Together, these tools provided a comprehensive analysis of data patterns, highlighting areas where targeted communication and training could drive improvements</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 3 -->
+    <div class="modal fade" id="modalProject3" tabindex="-1" role="dialog" aria-labelledby="modalProject3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject3Label">Project 3</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/SNOW Dashboard.png" class="img-fluid" alt="Project 3">
+                    <h5>Background Analysis</h5>
+                    <p>SNOW (ServiceNow) Dashboard to monitor key metrics and performance indicators. This dashboard included a variety of visualizations to offer a holistic view of operational data, including control charts for process stability analysis, pie charts for categorical distribution, and heat maps to identify areas with high activity or bottlenecks. These tools enabled quick insights and facilitated data-driven decision-making for process improvements.</p>
+                    <h5>Tools Used</h5>
+                    <p>The SNOW Dashboard was created using ServiceNow's reporting tools and integrated with visualization libraries for enhanced insights. Control charts provided insights into trends and variances over time, while pie charts displayed data composition, and heat maps helped visualize high-frequency areas, making it easy to identify priority issues at a glance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 4 -->
+    <div class="modal fade" id="modalProject4" tabindex="-1" role="dialog" aria-labelledby="modalProject4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject4Label">A3 Thinking - Lean Six Sigma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/A3 Thnking Landscape.png" class="img-fluid" alt="Project 4">
+                    <h5>Background Analysis</h5>
+                    <p>The payroll process was experiencing inefficiencies, with delays and errors impacting employee satisfaction and creating compliance risks. Analysis revealed bottlenecks due to redundant manual steps, data inconsistencies, and approval delays, which collectively increased the cycle time and error rate.</p>
+                    <h5>Tools Used</h5>
+                    <p>Using Value Stream Mapping as a primary tool, we mapped the entire payroll process to identify non-value-added steps and pinpoint areas of waste. This analysis highlighted key issues such as lack of standardization, manual data entry errors, and approval bottlenecks, which were all contributing to inefficiencies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 5 -->
+    <div class="modal fade" id="modalProject5" tabindex="-1" role="dialog" aria-labelledby="modalProject5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject5Label">Project 5</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/Dashboards.png" class="img-fluid" alt="Project 5">
+                    <h5>Background</h5>
+                    <p>To improve decision-making and operational efficiency, I developed several Power BI dashboards to showcase key HR data analytics. These dashboards were designed to provide insights into various aspects of HR operations, including the recruiting process, compensation analysis, productivity analysis, and data quality analysis.</p>
+                    <p>Each dashboard focused on providing actionable insights:
+                        <ul>
+                          <li><strong>Recruiting Process:</strong> Analyzed key recruitment metrics such as time-to-hire, candidate sources, and pipeline status.</li>
+                          <li><strong>Compensation Analysis:</strong> Compared compensation trends across departments, roles, and geographies to ensure alignment with market standards.</li>
+                          <li><strong>Productivity Analysis:</strong> Evaluated employee performance and productivity metrics to identify areas for improvement and recognition.</li>
+                          <li><strong>Data Quality Analysis:</strong> Assessed the completeness, accuracy, and consistency of HR data to drive data governance improvements.</p></li>
+                        </ul>
+                    <h5>Tools Used</h5>
+                    <p>Power BI: Developed interactive dashboards with various visualizations, filters, and drill-down capabilities.
+                    <ul>
+                        <li><strong>DAX (Data Analysis Expressions):</strong> Utilized for advanced calculations and custom metrics.</li>
+                        <li><strong>Power Query:</strong> Used for initial data transformation and cleaning within Power BI.</li>
+                        <li><strong>Python:</strong> Leveraged for more advanced data cleaning, transformation, and integration tasks, ensuring the data was in the right format for analysis.</li>
+                    </ul>
+                    The combination of these tools enabled the creation of dynamic, user-friendly dashboards that provided real-time insights, empowering HR to optimize processes and improve decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Project 6 -->
+    <div class="modal fade" id="modalProject6" tabindex="-1" role="dialog" aria-labelledby="modalProject6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProject6Label">JIRA Dashboard</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/projects/JIRA Dashboard.png" class="img-fluid" alt="Project 6">
+                      <h5>JIRA Dashboards: Test Management for Global HR System Implementation</h5>
+                      <p>As part of the global rollout of HR systems across over 80 countries, effective test management was essential to ensure smooth implementation and minimize issues during deployment. I developed a series of <strong>JIRA Dashboards</strong> to track test progress, manage issues, and ensure that all test cases were executed and resolved on time. The dashboards were designed to provide real-time visibility into test activities, including:</p>
+                      <ul>
+                        <li><strong>Test Execution Progress:</strong> Monitored the status of test cycles and individual test cases, tracking completion rates and open issues.</li>
+                        <li><strong>Issue Management:</strong> Highlighted critical defects and their impact on the overall project timeline, enabling quick resolution.</li>
+                        <li><strong>Test Coverage:</strong> Ensured that all HR system modules were thoroughly tested across different regions and user groups.</li>
+                        <li><strong>Global Tracking:</strong> Allowed for tracking and comparison of test progress across countries, ensuring consistency in test results and process adherence.</li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section text-center">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Education/bbk.png" class="card-edu" alt="Education 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Masters in Data Science</h5>
+                            <p class="card-title">2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Education/said.png" class="card-edu" alt="Education 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Management Programme</h5>
+                            <p class="card-title">2012</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/Education/Madras_University_Seal.svg.png" class="card-edu" alt="Education 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Bachelor of Commerce</h5>
+                            <p class="card-title">2003</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section text-center">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/certification/Prince2nobg.png" class="card-edu alt="Certification 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Prince 2 Practitioner</h5>
+                            <p class="√">2015</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/certification/6sigma.png" class="card-edu" alt="Certification 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Lean Six Sigma Black Belt</h5>
+                            <p class="ç">2006</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/certification/ISO.png" class="card-edu" alt="Certification 3">
+                        <div class="card-body">
+                            <h5 class="card-title">ISO 9001:2000 Lead Auditor</h5>
+                            <p class="card-title">2006</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>I’d love to hear from you! Whether you have a question, a project in mind, or just want to connect, feel free to reach out. You can contact me directly through email or connect with me on social media. Let’s start a conversation and explore how we can collaborate!</p>
+            <a href="mailto:askabouthari@icloud.com">
+                <img src="images/Contact/email3.png" alt="Email Me" style="width: 50px; height: 50px;">
+            </a>
+            <a href="https://github.com/Harir13" target="_blank"><img src="images/Contact/github.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
+            <a href="https://www.linkedin.com/in/harisprofessionallife/" target="_blank"><img src="images/Contact/linkedin.png" alt="Email Me" style="width: 50px; height: 50px;"></a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
